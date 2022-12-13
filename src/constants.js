@@ -14,9 +14,9 @@ const DATA = {
     NEAR: 1,
     FAR: 1000,
     POSITION: {
-      VECTOR_X: 50,
-      VECTOR_Y: 10,
-      VECTOR_Z: 0,
+      VECTOR_X: 30,
+      VECTOR_Y: 0,
+      VECTOR_Z: -3,
     }
   },
   WALL_GEOMETRY: {
@@ -31,10 +31,11 @@ const DATA = {
   },
   MATRIXS: {
     WALL: [
-      { position: [0, 0, 10], rotation: [0, 0, 0], vector: [0, 0, -1] },
-      { position: [0, 0, -10], rotation: [0, 0, 0], vector: [0, 0, 1] },
-      { position: [10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [-1, 0, 0] },
-      { position: [-10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [1, 0, 0] },
+      { position: [0, 0, 10], rotation: [0, 0, 0], vector: [0, 0, -1] }, // left
+      { position: [0, 0, -10], rotation: [0, 0, 0], vector: [0, 0, 1] }, // right
+      { position: [-10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [1, 0, 0] }, // after
+      { position: [10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [-1, 0, 0] }, // before
+      { position: [0, 0, 0], rotation: [0, -Math.PI / 10, 0], vector: [0, 0, 0] }, // between
     ],
     FLOOR: [
       { position: [0, -5, 0], rotation: [-Math.PI / 2, 0, 0], vector: [0, 1, 0] },

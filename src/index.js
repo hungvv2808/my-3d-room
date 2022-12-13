@@ -1,10 +1,5 @@
 import '../scss/style.scss';
 import * as THREE from 'three';
-import { 
-  onBeforeRender, 
-  onAfterRender, 
-  hexToHexDecimal 
-} from './utils';
 import { CONST } from './constants';
 import * as processes from './processes';
 
@@ -28,7 +23,7 @@ function init() {
 
   controls = processes.setControls(camera, renderer.domElement);
 
-  const walls = processes.createBoxGeometry();
+  const walls = processes.createBoxGeometry(false, true);
   const floors = processes.createBoxGeometry(true);
   const meshs = walls.concat(floors);
   meshs.forEach(mesh => {
