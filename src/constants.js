@@ -2,8 +2,7 @@ const COLOR = {
   BACKGROUND_COLOR: '#4285F4',
   WALL_COLOR: '#F4B400',
   FLOOR_COLOR: '#F4B40012',
-  AMBIENT_LIGHT_COLOR: 0x444444,
-  POINT_LIGHT_COLOR: 0xffffff,
+  LIGHT_COLOR: 0xffffff,
 }
 
 const DATA = {
@@ -14,9 +13,9 @@ const DATA = {
     NEAR: 1,
     FAR: 1000,
     POSITION: {
-      VECTOR_X: 30,
+      VECTOR_X: 40,
       VECTOR_Y: 0,
-      VECTOR_Z: -3,
+      VECTOR_Z: 1,
     }
   },
   WALL_GEOMETRY: {

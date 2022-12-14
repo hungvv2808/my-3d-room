@@ -1,38 +1,14 @@
 import '../scss/style.scss';
-import * as THREE from 'three';
-import { CONST } from './constants';
-import * as processes from './processes';
+import { Processes } from './processes';
 
-let mesh = undefined;
-let renderer = undefined;
-let scene = undefined;
-let camera = undefined;
-let controls = undefined;
+const processes = new Processes();
+const {renderer, scene, camera, controls} = processes.getter();
 
-init();
+processes.init();
 animate();
 
-function init() {
-  renderer = processes.setRender();
-  scene = new THREE.Scene();
-  scene.add(new THREE.AmbientLight(CONST.AMBIENT_LIGHT_COLOR));
-  
-  camera = processes.setCamera();
-  camera.add(new THREE.PointLight(CONST.POINT_LIGHT_COLOR, CONST.INTENSITY_LIGHT));
-  scene.add(camera);
-
-  controls = processes.setControls(camera, renderer.domElement);
-
-  const walls = processes.createBoxGeometry(false, true);
-  const floors = processes.createBoxGeometry(true);
-  const meshs = walls.concat(floors);
-  meshs.forEach(mesh => {
-    scene.add(mesh);
-  });
-}
-
 function animate() {
-  requestAnimationFrame(animate);
   controls.update();
   renderer.render(scene, camera);
+  requestAnimationFrame(animate);
 }
