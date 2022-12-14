@@ -18,3 +18,22 @@ export const onAfterRender = function (renderer, scene, camera, geometry, materi
 export const hexToHexDecimal = (hex) => {
   return Number(hex.toString().replace('#', '0x'));
 }
+
+export const degreesToRadians = (degrees) => {
+	return degrees * (Math.PI / 180)
+}
+
+export const center = (group) => {
+	new THREE.Box3().setFromObject(group).getCenter( group.position ).multiplyScalar( - 1 )
+	scene.add(group)
+}
+
+export const random = (min, max, float = false) => {
+  const val = Math.random() * (max - min) + min
+
+  if (float) {
+    return val
+  }
+
+  return Math.floor(val)
+}

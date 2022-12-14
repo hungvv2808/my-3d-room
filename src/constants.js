@@ -6,35 +6,39 @@ const COLOR = {
 }
 
 const DATA = {
-  INTENSITY_LIGHT: 0.8,
+  INTENSITY_LIGHT: 0.1,
   CAMERA: {
-    FOV: 50,
+    FOV: 60,
     ASPECT: window.innerWidth / window.innerHeight,
     NEAR: 1,
     FAR: 1000,
     POSITION: {
-      VECTOR_X: 40,
+      VECTOR_X: 50,
       VECTOR_Y: 0,
-      VECTOR_Z: 1,
+      VECTOR_Z: 0,
     }
   },
   WALL_GEOMETRY: {
-    WIDTH: 20.25,
+    WIDTH: 40.25,
     HEIGHT: 10,
     DEPTH: 0.25,
   },
   FLOOR_GEOMETRY: {
-    WIDTH: 20.25,
-    HEIGHT: 20.25,
+    WIDTH: 40.25,
+    HEIGHT: 40.25,
     DEPTH: 0.25,
   },
   MATRIXS: {
     WALL: [
-      { position: [0, 0, 10], rotation: [0, 0, 0], vector: [0, 0, -1] }, // left
-      { position: [0, 0, -10], rotation: [0, 0, 0], vector: [0, 0, 1] }, // right
-      { position: [-10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [1, 0, 0] }, // after
-      { position: [10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [-1, 0, 0] }, // before
-      { position: [0, 0, 0], rotation: [0, -Math.PI / 10, 0], vector: [0, 0, 0] }, // between
+      { position: [0, 0, 20], rotation: [0, 0, 0], vector: [0, 0, -1] },
+      { position: [0, 0, 10], rotation: [0, 0, 0], vector: [0, 0, -1] },
+      { position: [0, 0, -20], rotation: [0, 0, 0], vector: [0, 0, 1] },
+      { position: [0, 0, -10], rotation: [0, 0, 0], vector: [0, 0, 1] },
+      { position: [-20, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [1, 0, 0] },
+      { position: [-10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [1, 0, 0] },
+      { position: [10, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [-1, 0, 0] },
+      { position: [20, 0, 0], rotation: [0, -Math.PI / 2, 0], vector: [-1, 0, 0] },
+      // { position: [0, 0, 0], rotation: [0, -Math.PI / 10, 0], vector: [1, 0, 0] },
     ],
     FLOOR: [
       { position: [0, -5, 0], rotation: [-Math.PI / 2, 0, 0], vector: [0, 1, 0] },
