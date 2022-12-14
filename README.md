@@ -1,6 +1,6 @@
 # My room in 3D
 
-__Live Demo: *Updating...*__
+__Live Demo: *[My Room 3D](https://my-3d-room.netlify.app/)*__
 
 ## Libraries and frameworks
 ```text
