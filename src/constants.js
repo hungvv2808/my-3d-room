@@ -1,7 +1,7 @@
 const COLOR = {
   BACKGROUND_COLOR: '#4285F4',
   WALL_COLOR: '#F4B400',
-  FLOOR_COLOR: '#F4B40012',
+  FLOOR_COLOR: '#DB4437',
   LIGHT_COLOR: 0xffffff,
 }
 
@@ -14,7 +14,7 @@ const DATA = {
     FAR: 1000,
     POSITION: {
       VECTOR_X: 50,
-      VECTOR_Y: 0,
+      VECTOR_Y: 40,
       VECTOR_Z: 0,
     }
   },
@@ -43,6 +43,12 @@ const DATA = {
     FLOOR: [
       { position: [0, -5, 0], rotation: [-Math.PI / 2, 0, 0], vector: [0, 1, 0] },
     ],
+  },
+  ARROW_KEY_CODE: {
+    UP: 38,
+    RIGHT: 39,
+    DOWN: 40,
+    LEFT: 37
   }
 }
 
