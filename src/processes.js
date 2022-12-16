@@ -123,7 +123,7 @@ export class Processes {
     const modelPos = {
       x: 1,
       y: -5,
-      z: -19,
+      z: -1,
       name: 'object_' + randomString(),
     }
     let object = this.createModel(modelPos);
@@ -134,19 +134,19 @@ export class Processes {
       switch(e.keyCode) {
         case CONST.ARROW_KEY_CODE.UP:
           isArrow = true;
-          modelPos.z += 1;
+          modelPos.x += 1;
           break;
         case CONST.ARROW_KEY_CODE.RIGHT:
           isArrow = true;
-          modelPos.x += 1;
+          modelPos.z -= 1;
           break;
         case CONST.ARROW_KEY_CODE.DOWN:
           isArrow = true;
-          modelPos.z -= 1;
+          modelPos.x -= 1;
           break;
         case CONST.ARROW_KEY_CODE.LEFT:
           isArrow = true;
-          modelPos.x -= 1;
+          modelPos.z += 1;
           break;
         default:
           return;

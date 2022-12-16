@@ -13,8 +13,8 @@ const DATA = {
     NEAR: 1,
     FAR: 1000,
     POSITION: {
-      VECTOR_X: 50,
-      VECTOR_Y: 40,
+      VECTOR_X: 5,
+      VECTOR_Y: 50,
       VECTOR_Z: 0,
     }
   },

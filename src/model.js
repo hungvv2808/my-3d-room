@@ -27,6 +27,7 @@ export class Model {
 
     // Position according to params
     this.group.position.set(this.params.x, this.params.y, this.params.z);
+    this.group.rotation.y = Math.PI / 2;
 
     // Material
     this.headHue = random(0, 260);
